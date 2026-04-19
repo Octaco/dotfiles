@@ -1,3 +1,6 @@
+--vim ui2
+require("vim._core.ui2").enable({})
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -7,7 +10,9 @@ require("config.ui")
 require("core.statusline")
 require("core.terminal")
 
-require("plugins")
+require("config.autocommands")
+require("core.plugins")
 
 require("config.keymaps")
-require("config.autocommands")
+require("plugins.keymaps")
+-- require("config.autocommands")

@@ -1,44 +1,88 @@
-vim.pack.add({
-	"https://www.github.com/nvim-tree/nvim-tree.lua",
-	"https://www.github.com/ibhagwan/fzf-lua",
-	"https://www.github.com/echasnovski/mini.nvim",
-	"https://github.com/lewis6991/gitsigns.nvim",
+return {
+	-- ============================================================================
+	-- FILE EXPLORER / NAVIGATION
+	-- ============================================================================
+	{
+		src = "https://github.com/nvim-tree/nvim-tree.lua",
+		config = "plugins.nvim_tree",
+	},
+
+	-- ============================================================================
+	-- FUZZY FINDING / SEARCH
+	-- ============================================================================
+	{
+		src = "https://github.com/ibhagwan/fzf-lua",
+		config = "plugins.fzf",
+	},
+
+	-- ============================================================================
+	-- UI / UTILITIES
+	-- ============================================================================
+	{
+		src = "https://github.com/echasnovski/mini.nvim",
+		config = "plugins.mini",
+	},
+
+	-- ============================================================================
+	-- GIT INTEGRATION
+	-- ============================================================================
+	{
+		src = "https://github.com/lewis6991/gitsigns.nvim",
+		config = "plugins.gitsigns",
+	},
+
+	-- ============================================================================
+	-- SYNTAX / TREESITTER
+	-- ============================================================================
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
+		config = "plugins.treesitter",
 		branch = "main",
 		build = ":TSUpdate",
 	},
-	"https://github.com/neovim/nvim-lspconfig",
-	"https://github.com/mason-org/mason.nvim",
+
+	-- ============================================================================
+	-- LSP / DEVELOPMENT
+	-- ============================================================================
+	{
+		src = "https://github.com/creativenull/efmls-configs-nvim",
+		config = "plugins.efm",
+	},
+	{
+		src = "https://github.com/mason-org/mason.nvim",
+		config = "plugins.mason",
+	},
+	{
+		src = "https://github.com/neovim/nvim-lspconfig",
+		config = "plugins.lsp",
+	},
+
+	-- ============================================================================
+	-- AUTOCOMPLETION / SNIPPETS
+	-- ============================================================================
+	{
+		src = "https://github.com/L3mon4D3/LuaSnip",
+	},
 	{
 		src = "https://github.com/saghen/blink.cmp",
+		config = "plugins.blink",
 		version = vim.version.range("1.*"),
 	},
-	"https://www.github.com/creativenull/efmls-configs-nvim",
-	"https://www.github.com/L3mon4D3/LuaSnip",
-})
 
-local function packadd(name)
-	vim.cmd("packadd " .. name)
-end
+	-- ============================================================================
+	-- VISUAL / FUN
+	-- ============================================================================
+	{
+		src = "https://github.com/sphamba/smear-cursor.nvim",
+		config = "plugins.smear_cursor",
+	},
 
-packadd("nvim-tree.lua")
-packadd("fzf-lua")
-packadd("mini.nvim")
-packadd("gitsigns.nvim")
-packadd("nvim-treesitter")
-packadd("nvim-lspconfig")
-packadd("mason.nvim")
-packadd("efmls-configs-nvim")
-packadd("blink.cmp")
-packadd("LuaSnip")
-
-require("plugins.nvim-tree")
-require("plugins.fzf")
-require("plugins.mini")
-require("plugins.gitsigns")
-require("plugins.treesitter")
-require("plugins.mason")
-require("plugins.blink")
-require("plugins.lsp")
-require("plugins.efm")
+	-- ============================================================================
+	-- TODO / EXPERIMENTAL
+	-- ============================================================================
+	-- Add new plugins here before assigning them to a proper category
+	{
+		src = "https://github.com/folke/snacks.nvim",
+		config = "plugins.snacks",
+	},
+}

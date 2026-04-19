@@ -36,13 +36,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("TextYankPost", {
-	group = group,
-	callback = function()
-		vim.hl.on_yank()
-	end,
-})
-
 vim.api.nvim_create_autocmd("BufReadPost", {
 	group = group,
 	desc = "Restore last cursor position",
@@ -75,3 +68,19 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.colorcolumn = "100"
 	end,
 })
+
+-- vim.api.nvim_create_autocmd("UIEnter", {
+-- 	once = true,
+-- 	callback = function()
+-- 		vim.schedule(function()
+-- 			local buf = vim.api.nvim_get_current_buf()
+-- 			if vim.bo[buf].filetype == "snacks_dashboard" then
+-- 				vim.b[buf].minitrailspace_disable = true
+--
+-- 				if _G.MiniTrailspace and MiniTrailspace.unhighlight then
+-- 					pcall(MiniTrailspace.unhighlight, buf)
+-- 				end
+-- 			end
+-- 		end)
+-- 	end,
+-- })
