@@ -4,11 +4,14 @@ alias gita="git add"
 alias gitc="git commit -m"
 alias gitP="git push"
 
-alias yads="yadm status"
-alias yadp="yadm pull"
-alias yada="yadm add"
-alias yadc="yadm commit -m"
-alias yadP="yadm push"
+
+alias chs="chezmoi status"
+alias cha="chezmoi add"
+alias chA="chezmoi apply -v"
+alias chd="chezmoi diff"
+alias che="chezmoi edit"
+alias chcd="chezmoi cd"
+
 
 alias vim="nvim"
 
@@ -18,3 +21,9 @@ alias py="python3.13"
 alias rpi="ssh pirem@raspberrypi.local"
 
 alias k="kubectl"
+
+# kittens
+
+alias icat="kitten icat"
+alias d="kitten diff"
+
