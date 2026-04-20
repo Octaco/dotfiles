@@ -85,4 +85,12 @@ return {
 		src = "https://github.com/folke/snacks.nvim",
 		config = "plugins.snacks",
 	},
+	{
+		src = "https://github.com/ThePrimeagen/vim-be-good",
+	},
+	{
+		src = "https://github.com/obsidian-nvim/obsidian.nvim",
+		config = "plugins.obsidian",
+		version = vim.version.range("*"), -- use latest release, remove to use lateset commit
+	},
 }

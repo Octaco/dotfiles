@@ -63,6 +63,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.wrap = true
 		vim.opt_local.linebreak = true
 		vim.opt_local.spell = true
+		vim.opt_local.spelllang = { "de", "en" }
 		vim.opt_local.showbreak = "↪ "
 		vim.opt_local.textwidth = 100
 		vim.opt_local.colorcolumn = "100"
