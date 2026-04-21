@@ -76,6 +76,32 @@ return {
 		src = "https://github.com/sphamba/smear-cursor.nvim",
 		config = "plugins.smear_cursor",
 	},
+	--
+	-- ============================================================================
+	-- DEBUGGING
+	-- ============================================================================
+
+	{
+		src = "https://github.com/mfussenegger/nvim-dap",
+		config = "plugins.dap",
+	},
+
+	{
+		src = "https://github.com/nvim-neotest/nvim-nio",
+	},
+
+	{
+		src = "https://github.com/mfussenegger/nvim-dap-python",
+	},
+
+	{
+		src = "https://github.com/thehamsta/nvim-dap-virtual-text",
+	},
+
+	{
+		src = "https://github.com/rcarriga/nvim-dap-ui",
+		-- config = "plugins.dap_ui",
+	},
 
 	-- ============================================================================
 	-- TODO / EXPERIMENTAL
