@@ -56,6 +56,10 @@ return {
 		src = "https://github.com/neovim/nvim-lspconfig",
 		config = "plugins.lsp",
 	},
+	{
+		src = "https://github.com/mrcjkb/rustaceanvim",
+		version = vim.version.range("^9"),
+	},
 
 	-- ============================================================================
 	-- AUTOCOMPLETION / SNIPPETS

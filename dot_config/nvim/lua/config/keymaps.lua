@@ -44,6 +44,8 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 
+vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature help" })
+
 vim.keymap.set("n", "<leader>pa", function()
 	local path = vim.fn.expand("%:p")
 	vim.fn.setreg("+", path)
@@ -61,4 +63,3 @@ vim.keymap.set("n", "<leader>u", function()
 	vim.cmd.packadd("nvim.undotree")
 	require("undotree").open()
 end, { desc = "Toggle Undotree" })
-

@@ -157,7 +157,6 @@ lua/
 | `<leader>pd` | n | Previous diagnostic |
 | `<leader>q` | n | Open diagnostic location list |
 | `<leader>dl` | n | Show line diagnostics |
-| `<leader>fd` | n | Definitions via fzf |
 | `<leader>fr` | n | References |
 | `<leader>ft` | n | Type definitions |
 | `<leader>fs` | n | Document symbols |

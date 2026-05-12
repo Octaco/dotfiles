@@ -3,7 +3,7 @@ require("obsidian").setup({
 	workspaces = {
 		{
 			name = "Knowledge",
-			path = "/Users/leonard/vaults/Knowledge",
+			path = vim.fn.expand("~/vaults/Knowledge"),
 		},
 	},
 })
