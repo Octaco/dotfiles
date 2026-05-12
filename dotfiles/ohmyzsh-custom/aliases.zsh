@@ -1,8 +1,9 @@
 alias gits="git status"
 alias gitp="git pull"
 alias gita="git add"
-alias gitc="git commit -m"
+alias gitc="git commit"
 alias gitP="git push"
+alias lg="lazygit"
 
 
 alias chs="chezmoi status"
@@ -14,6 +15,7 @@ alias chcd="chezmoi cd"
 
 
 alias vim="nvim"
+alias vi="nvim"
 
 alias python="python3.13"
 alias py="python3.13"
