@@ -56,6 +56,10 @@ return {
 		src = "https://github.com/neovim/nvim-lspconfig",
 		config = "plugins.lsp",
 	},
+	{
+		src = "https://github.com/mrcjkb/rustaceanvim",
+		version = vim.version.range("^9"),
+	},
 
 	-- ============================================================================
 	-- AUTOCOMPLETION / SNIPPETS
@@ -76,6 +80,32 @@ return {
 		src = "https://github.com/sphamba/smear-cursor.nvim",
 		config = "plugins.smear_cursor",
 	},
+	--
+	-- ============================================================================
+	-- DEBUGGING
+	-- ============================================================================
+
+	{
+		src = "https://github.com/mfussenegger/nvim-dap",
+		config = "plugins.dap",
+	},
+
+	{
+		src = "https://github.com/nvim-neotest/nvim-nio",
+	},
+
+	{
+		src = "https://github.com/mfussenegger/nvim-dap-python",
+	},
+
+	{
+		src = "https://github.com/thehamsta/nvim-dap-virtual-text",
+	},
+
+	{
+		src = "https://github.com/rcarriga/nvim-dap-ui",
+		-- config = "plugins.dap_ui",
+	},
 
 	-- ============================================================================
 	-- TODO / EXPERIMENTAL
@@ -84,5 +114,13 @@ return {
 	{
 		src = "https://github.com/folke/snacks.nvim",
 		config = "plugins.snacks",
+	},
+	{
+		src = "https://github.com/ThePrimeagen/vim-be-good",
+	},
+	{
+		src = "https://github.com/obsidian-nvim/obsidian.nvim",
+		config = "plugins.obsidian",
+		version = vim.version.range("*"), -- use latest release, remove to use lateset commit
 	},
 }

@@ -15,4 +15,3 @@ require("core.plugins")
 
 require("config.keymaps")
 require("plugins.keymaps")
--- require("config.autocommands")
