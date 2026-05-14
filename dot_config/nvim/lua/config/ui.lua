@@ -1,4 +1,5 @@
-vim.cmd.colorscheme("habamax")
+-- vim.cmd.colorscheme("habamax")
+vim.cmd.colorscheme("catppuccin-nvim")
 
 local M = {}
 

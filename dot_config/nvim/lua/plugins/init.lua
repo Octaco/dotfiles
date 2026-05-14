@@ -7,6 +7,11 @@ return {
 		config = "plugins.nvim_tree",
 	},
 
+	{
+		src = "https://github.com/christoomey/vim-tmux-navigator",
+		config = "plugins.vim_tmux_navigator",
+	},
+
 	-- ============================================================================
 	-- FUZZY FINDING / SEARCH
 	-- ============================================================================
@@ -21,6 +26,11 @@ return {
 	{
 		src = "https://github.com/echasnovski/mini.nvim",
 		config = "plugins.mini",
+	},
+
+	{
+		src = "https://github.com/catppuccin/nvim",
+		name = "catppuccin-nvim",
 	},
 
 	-- ============================================================================

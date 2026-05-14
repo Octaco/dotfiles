@@ -29,8 +29,8 @@ end
 vim.pack.add(pack_specs)
 
 for _, plugin in ipairs(plugins) do
-	local plugin_name = get_plugin_name(plugin)
-	vim.cmd.packadd(plugin_name)
+	-- local plugin_name = get_plugin_name(plugin)
+	-- vim.cmd.packadd(plugin_name)
 
 	if plugin.config then
 		require(plugin.config)
