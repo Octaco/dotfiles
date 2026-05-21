@@ -46,75 +46,6 @@
             ]
           },
           {
-            "description": "Hyper Key + spacebar",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-                  }
-                ],
-                "description": "Open raycast://extensions/stellate/mxstbr-commands/create-notion-todo",
-                "type": "basic",
-                "from": {
-                  "key_code": "spacebar",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper",
-                    "value": 1
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_spacebar",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_b",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_s",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_v",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 0
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "description": "Hyper Key sublayer \"b\"",
             "manipulators": [
               {
@@ -147,11 +78,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_spacebar",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_o",
                     "value": 0
                   },
@@ -173,11 +99,6 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
                     "value": 0
                   },
                   {
@@ -342,11 +263,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_spacebar",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_b",
                     "value": 0
                   },
@@ -368,11 +284,6 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
                     "value": 0
                   },
                   {
@@ -681,11 +592,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_spacebar",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_b",
                     "value": 0
                   },
@@ -711,26 +617,18 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper",
                     "value": 1
                   }
                 ]
               },
               {
-                "description": "Window: Hide",
                 "to": [
                   {
-                    "key_code": "h",
-                    "modifiers": [
-                      "right_command"
-                    ]
+                    "shell_command": "/opt/homebrew/bin/aerospace layout floating tiling"
                   }
                 ],
+                "description": "AeroSpace: layout floating tiling",
                 "type": "basic",
                 "from": {
                   "key_code": "semicolon",
@@ -751,10 +649,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -g raycast://extensions/raycast/window-management/make-larger"
+                    "shell_command": "/opt/homebrew/bin/aerospace resize smart +50"
                   }
                 ],
-                "description": "Window: make-larger",
+                "description": "AeroSpace: resize smart +50",
                 "type": "basic",
                 "from": {
                   "key_code": "equal_sign",
@@ -775,10 +673,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -g raycast://extensions/raycast/window-management/make-smaller"
+                    "shell_command": "/opt/homebrew/bin/aerospace resize smart -50"
                   }
                 ],
-                "description": "Window: make-smaller",
+                "description": "AeroSpace: resize smart -50",
                 "type": "basic",
                 "from": {
                   "key_code": "hyphen",
@@ -799,10 +697,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -g raycast://extensions/raycast/window-management/previous-display"
+                    "shell_command": "/opt/homebrew/bin/aerospace move-node-to-monitor --wrap-around --focus-follows-window prev"
                   }
                 ],
-                "description": "Window: previous-display",
+                "description": "AeroSpace: move-node-to-monitor --wrap-around --focus-follows-window prev",
                 "type": "basic",
                 "from": {
                   "key_code": "z",
@@ -823,10 +721,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -g raycast://extensions/raycast/window-management/next-display"
+                    "shell_command": "/opt/homebrew/bin/aerospace move-node-to-monitor --wrap-around --focus-follows-window next"
                   }
                 ],
-                "description": "Window: next-display",
+                "description": "AeroSpace: move-node-to-monitor --wrap-around --focus-follows-window next",
                 "type": "basic",
                 "from": {
                   "key_code": "o",
@@ -847,58 +745,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -g raycast://extensions/raycast/window-management/top-half"
+                    "shell_command": "/opt/homebrew/bin/aerospace focus left"
                   }
                 ],
-                "description": "Window: top-half",
-                "type": "basic",
-                "from": {
-                  "key_code": "k",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-half"
-                  }
-                ],
-                "description": "Window: bottom-half",
-                "type": "basic",
-                "from": {
-                  "key_code": "j",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -g raycast://extensions/raycast/window-management/left-half"
-                  }
-                ],
-                "description": "Window: left-half",
+                "description": "AeroSpace: focus left",
                 "type": "basic",
                 "from": {
                   "key_code": "h",
@@ -919,10 +769,58 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -g raycast://extensions/raycast/window-management/right-half"
+                    "shell_command": "/opt/homebrew/bin/aerospace focus down"
                   }
                 ],
-                "description": "Window: right-half",
+                "description": "AeroSpace: focus down",
+                "type": "basic",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/aerospace focus up"
+                  }
+                ],
+                "description": "AeroSpace: focus up",
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/aerospace focus right"
+                  }
+                ],
+                "description": "AeroSpace: focus right",
                 "type": "basic",
                 "from": {
                   "key_code": "l",
@@ -943,10 +841,106 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -g raycast://extensions/raycast/window-management/maximize"
+                    "shell_command": "/opt/homebrew/bin/aerospace move left"
                   }
                 ],
-                "description": "Window: maximize",
+                "description": "AeroSpace: move left",
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/aerospace move down"
+                  }
+                ],
+                "description": "AeroSpace: move down",
+                "type": "basic",
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/aerospace move up"
+                  }
+                ],
+                "description": "AeroSpace: move up",
+                "type": "basic",
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/aerospace move right"
+                  }
+                ],
+                "description": "AeroSpace: move right",
+                "type": "basic",
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/aerospace fullscreen"
+                  }
+                ],
+                "description": "AeroSpace: fullscreen",
                 "type": "basic",
                 "from": {
                   "key_code": "f",
@@ -967,13 +961,61 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -g raycast://extensions/raycast/window-management/toggle-fullscreen"
+                    "shell_command": "/opt/homebrew/bin/aerospace macos-native-fullscreen"
                   }
                 ],
-                "description": "Window: toggle-fullscreen",
+                "description": "AeroSpace: macos-native-fullscreen",
                 "type": "basic",
                 "from": {
                   "key_code": "g",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/aerospace mode resize"
+                  }
+                ],
+                "description": "AeroSpace: mode resize",
+                "type": "basic",
+                "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/aerospace reload-config"
+                  }
+                ],
+                "description": "AeroSpace: reload-config",
+                "type": "basic",
+                "from": {
+                  "key_code": "quote",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -1159,11 +1201,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_spacebar",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_b",
                     "value": 0
                   },
@@ -1185,11 +1222,6 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
                     "value": 0
                   },
                   {
@@ -1365,60 +1397,12 @@
                 ]
               },
               {
+                "description": "Toggle system appearance (dark/light)",
                 "to": [
                   {
-                    "shell_command": "open raycast://extensions/thomas/elgato-key-light/toggle?launchType=background"
+                    "shell_command": "osascript -e 'tell application \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
                   }
                 ],
-                "description": "Open raycast://extensions/thomas/elgato-key-light/toggle?launchType=background",
-                "type": "basic",
-                "from": {
-                  "key_code": "e",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_s",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background"
-                  }
-                ],
-                "description": "Open raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background",
-                "type": "basic",
-                "from": {
-                  "key_code": "d",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_s",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/raycast/system/toggle-system-appearance"
-                  }
-                ],
-                "description": "Open raycast://extensions/raycast/system/toggle-system-appearance",
                 "type": "basic",
                 "from": {
                   "key_code": "t",
@@ -1439,10 +1423,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open raycast://extensions/raycast/system/open-camera"
+                    "shell_command": "open -a 'Photo Booth.app'"
                   }
                 ],
-                "description": "Open raycast://extensions/raycast/system/open-camera",
+                "description": "Open -a 'Photo Booth.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "c",
@@ -1521,11 +1505,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_spacebar",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_b",
                     "value": 0
                   },
@@ -1547,11 +1526,6 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
                     "value": 0
                   },
                   {
@@ -1813,11 +1787,6 @@
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_spacebar",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
                     "name": "hyper_sublayer_b",
                     "value": 0
                   },
@@ -1839,11 +1808,6 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_v",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
                     "value": 0
                   },
                   {
@@ -1918,273 +1882,6 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_c",
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Hyper Key sublayer \"r\"",
-            "manipulators": [
-              {
-                "description": "Toggle Hyper sublayer r",
-                "type": "basic",
-                "from": {
-                  "key_code": "r",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to_after_key_up": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_sublayer_r",
-                      "value": 0
-                    }
-                  }
-                ],
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_sublayer_r",
-                      "value": 1
-                    }
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_spacebar",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_b",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_s",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_v",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_c",
-                    "value": 0
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "hyper",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/raycast/raycast/run-last-command"
-                  }
-                ],
-                "description": "Open raycast://extensions/raycast/raycast/run-last-command",
-                "type": "basic",
-                "from": {
-                  "key_code": "spacebar",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/raycast/raycast-ai/ai-chat"
-                  }
-                ],
-                "description": "Open raycast://extensions/raycast/raycast-ai/ai-chat",
-                "type": "basic",
-                "from": {
-                  "key_code": "a",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-                  }
-                ],
-                "description": "Open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
-                "type": "basic",
-                "from": {
-                  "key_code": "e",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/raycast/file-search/search-files?fallbackText="
-                  }
-                ],
-                "description": "Open raycast://extensions/raycast/file-search/search-files?fallbackText=",
-                "type": "basic",
-                "from": {
-                  "key_code": "s",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/raycast/clipboard-history/clipboard-history"
-                  }
-                ],
-                "description": "Open raycast://extensions/raycast/clipboard-history/clipboard-history",
-                "type": "basic",
-                "from": {
-                  "key_code": "h",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://script-commands/dismiss-notifications"
-                  }
-                ],
-                "description": "Open raycast://script-commands/dismiss-notifications",
-                "type": "basic",
-                "from": {
-                  "key_code": "n",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
-                  }
-                ],
-                "description": "Open raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink",
-                "type": "basic",
-                "from": {
-                  "key_code": "l",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/raycast/raycast/confetti"
-                  }
-                ],
-                "description": "Open raycast://extensions/raycast/raycast/confetti",
-                "type": "basic",
-                "from": {
-                  "key_code": "p",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
                     "value": 1
                   }
                 ]

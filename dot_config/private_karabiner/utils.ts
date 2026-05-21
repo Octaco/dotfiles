@@ -192,16 +192,16 @@ export function shell(
 }
 
 /**
- * Shortcut for managing window sizing
+ * Shortcut for running an AeroSpace command
  */
-export function window(name: string): LayerCommand {
+export function aerospace(args: string): LayerCommand {
   return {
     to: [
       {
-        shell_command: `open -g raycast://extensions/raycast/window-management/${name}`,
+        shell_command: `/opt/homebrew/bin/aerospace ${args}`,
       },
     ],
-    description: `Window: ${name}`,
+    description: `AeroSpace: ${args}`,
   };
 }
 

@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, window, shell } from "./utils";
+import { createHyperSubLayers, app, open, aerospace} from "./utils";
 
 // run "yarn run build" to generate karabiner.json
 
@@ -58,9 +58,6 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-    spacebar: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-    ),
     // b = "B"rowse
     b: {
       // Quarterly "P"lan
@@ -89,43 +86,26 @@ const rules: KarabinerRules[] = [
       c: app("Claude")
     },
 
-    // TODO: This doesn't quite work yet.
-    // l = "Layouts" via Raycast's custom window management
-    // l: {
-    //   // Coding layout
-    //   c: shell`
-    //     open -a "Visual Studio Code.app"
-    //     sleep 0.2
-    //     open -g "raycast://customWindowManagementCommand?position=topLeft&relativeWidth=0.5"
-
-    //     open -a "Terminal.app"
-    //     sleep 0.2
-    //     open -g "raycast://customWindowManagementCommand?position=topRight&relativeWidth=0.5"
-    //   `,
-    // },
-
     // w = "Window"
     w: {
-      semicolon: {
-        description: "Window: Hide",
-        to: [
-          {
-            key_code: "h",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      equal_sign: window("make-larger"),
-      hyphen: window("make-smaller"),
+      semicolon: aerospace("layout floating tiling"),
+      equal_sign: aerospace("resize smart +50"),
+      hyphen: aerospace("resize smart -50"),
 
-      z: window("previous-display"),
-      o: window("next-display"),
-      k: window("top-half"),
-      j: window("bottom-half"),
-      h: window("left-half"),
-      l: window("right-half"),
-      f: window("maximize"),
-      g: window("toggle-fullscreen"),
+      z: aerospace("move-node-to-monitor --wrap-around --focus-follows-window prev"),
+      o: aerospace("move-node-to-monitor --wrap-around --focus-follows-window next"),
+      h: aerospace("focus left"),
+      j: aerospace("focus down"),
+      k: aerospace("focus up"),
+      l: aerospace("focus right"),
+      left_arrow: aerospace("move left"),
+      down_arrow: aerospace("move down"),
+      up_arrow: aerospace("move up"),
+      right_arrow: aerospace("move right"),
+      f: aerospace("fullscreen"),
+      g: aerospace("macos-native-fullscreen"),
+      r: aerospace("mode resize"),
+      quote: aerospace("reload-config"),
       u: {
         description: "Window: Previous Tab",
         to: [
@@ -226,16 +206,16 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      e: open(
-        `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
-      ),
-      // "D"o not disturb toggle
-      d: open(
-        `raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background`
-      ),
       // "T"heme
-      t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
-      c: open("raycast://extensions/raycast/system/open-camera"),
+      t: {
+        description: "Toggle system appearance (dark/light)",
+        to: [
+          {
+            shell_command: `osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to not dark mode'`,
+          },
+        ],
+      },
+      c: app("Photo Booth"),
       // 'v'oice
       v: {
         to: [
@@ -295,17 +275,6 @@ const rules: KarabinerRules[] = [
       },
     },
 
-    // r = "Raycast"
-    r: {
-      spacebar: open("raycast://extensions/raycast/raycast/run-last-command"),
-      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      e: open("raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"),
-      s: open("raycast://extensions/raycast/file-search/search-files?fallbackText="),
-      h: open("raycast://extensions/raycast/clipboard-history/clipboard-history"),
-      n: open("raycast://script-commands/dismiss-notifications"),
-      l: open("raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"),
-      p: open("raycast://extensions/raycast/raycast/confetti"),
-    },
   }),
   {
     description: "Change Backspace to Spacebar when Minecraft is focused",
