@@ -1,5 +1,7 @@
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Secure and free password manager for all of your devices
 brew "bitwarden-cli"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
@@ -8,6 +10,8 @@ brew "btop"
 brew "chezmoi"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Modern, maintained replacement for ls
+brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Command-line fuzzy finder written in Go
