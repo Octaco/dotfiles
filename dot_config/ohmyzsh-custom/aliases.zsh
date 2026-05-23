@@ -24,8 +24,15 @@ alias rpi="ssh pirem@raspberrypi.local"
 
 alias k="kubectl"
 
+alias bdump="brew bundle dump --force --file=~/Brewfile --describe"
+
 # kittens
 
 alias icat="kitten icat"
 alias d="kitten diff"
 
+
+# other
+
+alias ls="eza --icons --git"
+alias cat="bat --paging=never"
