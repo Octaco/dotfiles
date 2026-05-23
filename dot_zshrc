@@ -69,7 +69,7 @@ ZSH_THEME="half-life"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM="$HOME/dotfiles/ohmyzsh-custom"
+ZSH_CUSTOM="$HOME/.config/ohmyzsh-custom"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
