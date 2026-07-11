@@ -29,6 +29,11 @@ function M.set_transparent()
 		"TabLineFill",
 		"TabLineSel",
 		"ColorColumn",
+		-- nvim-tree (must be here so they survive colorscheme reloads)
+		"NvimTreeNormal",
+		"NvimTreeNormalNC",
+		"NvimTreeEndOfBuffer",
+		"NvimTreeSignColumn",
 	}
 
 	for _, group in ipairs(groups) do
@@ -37,6 +42,7 @@ function M.set_transparent()
 
 	vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
 	vim.api.nvim_set_hl(0, "StatusLineBold", { bold = true })
+	vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { fg = "#2a2a2a", bg = "none" })
 end
 
 -- ============================================================================

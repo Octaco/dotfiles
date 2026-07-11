@@ -12,6 +12,16 @@ return {
 		config = "plugins.vim_tmux_navigator",
 	},
 
+	{
+		src = "https://github.com/nvim-lua/plenary.nvim",
+	},
+
+	{
+		src = "https://github.com/ThePrimeagen/harpoon",
+		version = "harpoon2",
+		config = "plugins.harpoon",
+	},
+
 	-- ============================================================================
 	-- FUZZY FINDING / SEARCH
 	-- ============================================================================
@@ -26,6 +36,11 @@ return {
 	{
 		src = "https://github.com/echasnovski/mini.nvim",
 		config = "plugins.mini",
+	},
+
+	{
+		src = "https://github.com/folke/which-key.nvim",
+		config = "plugins.which_key",
 	},
 
 	{

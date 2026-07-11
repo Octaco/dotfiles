@@ -36,3 +36,4 @@ alias d="kitten diff"
 
 alias ls="eza --icons --git"
 alias cat="bat --paging=never"
+alias grep="rg"
