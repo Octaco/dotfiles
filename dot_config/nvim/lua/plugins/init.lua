@@ -13,6 +13,11 @@ return {
 	},
 
 	{
+		src = "https://github.com/folke/flash.nvim",
+		config = "plugins.flash",
+	},
+
+	{
 		src = "https://github.com/nvim-lua/plenary.nvim",
 	},
 
